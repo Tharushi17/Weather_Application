@@ -6,6 +6,9 @@
     <title>Weather</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
 
 </head>
 <body>
@@ -35,8 +38,7 @@
         <div class="card text-bg-dark">
             <img src="assets\1.jpg" class="card-img" alt="...">
             <div class="card-img-overlay">
-              <h1 class="card-title"><strong>Daily</strong></h1>
-              <h1 class="card-title2"><strong>Weather</strong></h1>
+              <h1 class="card-title" id="title2"><strong>Daily Weather</strong></h1>
             </div>
           </div><!--main image-->
 
@@ -112,7 +114,7 @@
     
         <div class="container">
             <div class="row mt-3" id="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d31705.787833852708!2d79.95392!3d6.619136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2slk!4v1695663330626!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                
             </div>
         </div><!--map View-->
     
@@ -120,8 +122,8 @@
         <div class="container" id="moreWeather">
             <div class="row mt-5">
                     <div class="text-center"></div>
-                    <button id="history" onclick="historyBtnOnAction()">Past Weather</button>
-                    <button id="future" onclick="futureBtnOnAction()">Upcoming Weather</button>
+                    <button id="historyBtn" onclick="historyBtnOnAction()">Past Weather</button>
+                    <button id="futureBtn" onclick="futureBtnOnAction()">Upcoming Weather</button>
                 </div>
                 </div>
             </div>
@@ -144,9 +146,15 @@
         </footer>
         
     </div>
-     
-    <script src="js/jQuery.js"></script>
+
+
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+ 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="js/app.js"></script>
 
 </body>

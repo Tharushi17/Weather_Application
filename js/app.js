@@ -1,4 +1,42 @@
 
+const successCallBack = (position)=>{
+    console.log(position);
+    setLocationInMap(position.coords.lattitude, position.coords.longitude);
+}
+const errorCallBack = (error) =>{
+    console.log(error);
+}
+
+getLocation();
+
+function getLocation(){
+    navigator.geolocation.getCurrentPosition(successCallBack, errorCallBack);
+}
+
+
+//----------------- map view ------------------------
+
+var map = L.map('map').setView([51.505, -0.09], 13);
+
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+
+const marker = L.marker([0,0]).addTo(map);
+
+
+function setLocationInMap( ltd, lng){
+    marker.setLatLng([ ltd,lng]).update();
+    map.setView([ltd,lng],13)
+
+}
+
+
+
+
+//------- today ----------------
+
 function searchOnAction(){
 
         const city = $("#cityName");
@@ -16,6 +54,18 @@ function searchOnAction(){
         const key = "841e4f34d3e84f18aa7144506232109";
         const n = search.value;
 
+        $.ajax({
+    
+            method : "GET",
+            url : `http://api.weatherapi.com/v1/forecast.json?key=${key}&q=${n}`,
+                
+            success : (resp) =>{
+                console.log(resp);
+            }
+
+        });
+
+
     if(search != ""){
         $.ajax({
             method : "GET",
@@ -31,10 +81,12 @@ function searchOnAction(){
                 wind.text(resp.wind_mph);
 
                 condition.text(resp.current.condition.text);
-
                 time.text(resp.location.localtime);
-
                 icon.attr("src", resp.current.condition.icon);
+
+
+                setLocationInMap(resp.location.lat, resp.location.lon);
+
             }
         });
     }else{
@@ -52,6 +104,11 @@ function futureBtnOnAction(){
 }
 
 
+
+
+
+
+//------------------ hisory ----------------------------------
 
 function searchHistory(){
 
@@ -315,43 +372,43 @@ function searchHistory(){
                     $.ajax({
     
                         method : "GET",
-                        url : `http://api.weatherapi.com/v1/future.json?key=${key}&q=${n}&dt=${formattedDate}&end_dt=${formattedThreeDays}`,
+                        url : `http://api.weatherapi.com/v1/forecast.json?key=${key}&q=${n}&days=4`,
                             
                         success : (resp) =>{
                             console.log(resp);
     
                             if(resp.forecast && resp.forecast.forecastday && resp.forecast.forecastday.length > 0){
-                                icon1.attr("src", resp.forecast.forecastday[0].day.condition.icon);
-                                day1.text(resp.forecast.forecastday[0].date);
+                                icon1.attr("src", resp.forecast.forecastday[1].day.condition.icon);
+                                day1.text(resp.forecast.forecastday[1].date);
     
-                                temp1.text(resp.forecast.forecastday[0].day.avgtemp_c)
-                                humid1.text(resp.forecast.forecastday[0].day.avghumidity);
-                                uv1.text(resp.forecast.forecastday[0].day.uv);
-                                wind1.text(resp.forecast.forecastday[0].day.avgvis_miles);
-                                condition1.text(resp.forecast.forecastday[0].day.condition.text);
+                                temp1.text(resp.forecast.forecastday[1].day.avgtemp_c)
+                                humid1.text(resp.forecast.forecastday[1].day.avghumidity);
+                                uv1.text(resp.forecast.forecastday[1].day.uv);
+                                wind1.text(resp.forecast.forecastday[1].day.avgvis_miles);
+                                condition1.text(resp.forecast.forecastday[1].day.condition.text);
                             
                             
                             //---- day 2 -----------
-                                icon2.attr("src", resp.forecast.forecastday[1].day.condition.icon);
-                                day2.text(resp.forecast.forecastday[1].date);
+                                icon2.attr("src", resp.forecast.forecastday[2].day.condition.icon);
+                                day2.text(resp.forecast.forecastday[2].date);
     
-                                temp2.text(resp.forecast.forecastday[1].day.avgtemp_c)
-                                humid2.text(resp.forecast.forecastday[1].day.avghumidity);
-                                uv2.text(resp.forecast.forecastday[1].day.uv);
-                                wind2.text(resp.forecast.forecastday[1].day.avgvis_miles);
-                                condition2.text(resp.forecast.forecastday[1].day.condition.text);
+                                temp2.text(resp.forecast.forecastday[2].day.avgtemp_c)
+                                humid2.text(resp.forecast.forecastday[2].day.avghumidity);
+                                uv2.text(resp.forecast.forecastday[2].day.uv);
+                                wind2.text(resp.forecast.forecastday[2].day.avgvis_miles);
+                                condition2.text(resp.forecast.forecastday[2].day.condition.text);
                             
     
     
                             //---- day 3 -----------
-                                icon3.attr("src", resp.forecast.forecastday[2].day.condition.icon);
-                                day3.text(resp.forecast.forecastday[2].date);
+                                icon3.attr("src", resp.forecast.forecastday[3].day.condition.icon);
+                                day3.text(resp.forecast.forecastday[3].date);
     
-                                temp3.text(resp.forecast.forecastday[2].day.avgtemp_c)
-                                humid3.text(resp.forecast.forecastday[2].day.avghumidity);
-                                uv3.text(resp.forecast.forecastday[2].day.uv);
-                                wind3.text(resp.forecast.forecastday[2].day.avgvis_miles);
-                                condition3.text(resp.forecast.forecastday[2].day.condition.text);
+                                temp3.text(resp.forecast.forecastday[3].day.avgtemp_c)
+                                humid3.text(resp.forecast.forecastday[3].day.avghumidity);
+                                uv3.text(resp.forecast.forecastday[3].day.uv);
+                                wind3.text(resp.forecast.forecastday[3].day.avgvis_miles);
+                                condition3.text(resp.forecast.forecastday[3].day.condition.text);
                                 
                         }   
                     }
@@ -369,3 +426,6 @@ var moonIcon = document.getElementById("moonIcon");
 moonIcon.onclick = function(){
     document.body.classList.toggle("dark-theme");
 }
+
+
+

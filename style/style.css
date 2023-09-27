@@ -15,11 +15,11 @@
 }
 :root{
     --primary-color:#ffffff;
-    --secondary-color:rgb(34, 32, 32); 
+    --secondary-color:rgb(52, 49, 49); 
 
 }
 .dark-theme{
-    --primary-color:rgb(34, 32, 32);
+    --primary-color:rgb(52, 49, 49);
     --secondary-color:#ffffff;
 }
 
@@ -34,7 +34,9 @@
     margin-left: 50px;
     text-align: center;
 }
-
+#title2{
+    color: var(--secondary-color);
+}
 #outerContainer{
     position: relative;
 }
@@ -73,7 +75,7 @@
     height: 110px;
 }
 
-#history{
+#historyBtn{
     padding: 15px;
     margin-left: 50px;
     background-color: #82E5E0;
@@ -81,7 +83,7 @@
     border: 0;
 }
 
-#future{
+#futureBtn{
     padding: 15px;
     margin-left: 100px;
     background-color:#ABE3F5;
@@ -170,6 +172,8 @@
     margin: 0;
 }
 <!--sign-up-->
+
+
 
 
 
@@ -267,7 +271,9 @@ footer{
     color: #EEEEEE;
     margin-left: 50px;
 }
-
+#map{
+    height: 190px;
+}
 
 
 <!--history-->
