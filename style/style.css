@@ -1,0 +1,302 @@
+.logo{
+    height: 60px;
+    width: 60px;
+    position: relative;
+    left: 20px;
+}
+
+*body {
+    margin: 0;
+    padding: 0;
+}
+
+#home{
+    background-color: var(--primary-color);
+}
+:root{
+    --primary-color:#ffffff;
+    --secondary-color:rgb(34, 32, 32); 
+
+}
+.dark-theme{
+    --primary-color:rgb(34, 32, 32);
+    --secondary-color:#ffffff;
+}
+
+
+
+#navbar{
+    background-color: #076480;
+    color: var(--primary-color);
+}
+#navbar li{
+    color: var(--primary-color);
+    margin-left: 50px;
+    text-align: center;
+}
+
+#outerContainer{
+    position: relative;
+}
+
+#search{
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: fit-content;
+}
+
+
+#title{
+    position: absolute;
+}
+
+#details  {
+    margin-top: 150px;
+    background-color: #57b4ad;
+    width: 90%;
+    max-width: 1080px;
+    min-width: 360px;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+
+#img{
+    max-width: max-content;
+}
+
+#icon{
+    margin-top: 20px;
+    width: 110px;
+    height: 110px;
+}
+
+#history{
+    padding: 15px;
+    margin-left: 50px;
+    background-color: #82E5E0;
+    border-radius: 15px;
+    border: 0;
+}
+
+#future{
+    padding: 15px;
+    margin-left: 100px;
+    background-color:#ABE3F5;
+    border-radius: 15px;
+    border: 0;
+}
+
+.humidity-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.temp-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wind-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#cityName{
+    color: var(--secondary-color);
+}
+#details{
+    color: black;
+}
+#details h3{
+    color: black;
+}
+#condition{
+    color: var(--secondary-color);
+}
+
+#button-separator{
+    background-color: var(--primary-color);
+    height: 2px;
+    margin: 10px 0;
+}
+
+#map{
+    margin-left: 25px;
+}
+#moonIcon{
+    width: 40px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+<!--Homepage-->
+
+
+#footer {
+
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #165D74;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+#home{
+    margin: 0%;
+}
+
+.container {
+    overflow: hidden;
+}
+
+
+#navbar2{
+    background-color: #076480;
+    color: aliceblue;
+    padding: 15px;
+}
+
+#img-rain{
+    max-width: 30%;
+    margin: 0;
+}
+<!--sign up
+
+
+
+.card-title{
+    margin-top: 20px;
+}
+.card-title2{
+    margin-left: 40px;
+}
+.card{
+    border: 0;
+}
+
+#searchField{
+    padding: 4px;
+    margin-top: 1px;
+}
+.btn{
+    margin-left: 5px;
+}
+
+
+.input{
+    margin-left: 11%;
+    background-color:#EEEEEE;
+    border: 0;
+    padding: 5px;
+}
+.input1{
+    margin-left: 5%;
+    background-color:#EEEEEE;
+    border: 0;
+    padding: 5px;
+}
+#sign-in-details{
+    margin-top: 5%;
+}
+
+#signUp{
+    padding: 10px;
+    border-radius: 15px;
+    border: 0;
+    background-color: #ABE3F5;
+    margin-left: 28%;
+}
+#logIn{
+    padding: 10px;
+    border-radius: 15px;
+    border: 0;
+    background-color: #BFF9EC;
+    margin-left: 30px;
+}
+
+footer{
+    background-color: #076480;;
+}
+
+.footerContainer{
+    width: 100%;
+    padding: 30px;
+}
+
+.socialIcons{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.footerNav{
+    margin: 30px 0;
+
+}
+
+.footerNav p{
+    display: flex;
+    justify-content: center;
+    color: #EEEEEE;
+}
+
+#facebook{
+    margin-right: 30px;
+}
+#insta{
+    margin-right: 30px;
+}
+#twitter{
+    margin-right: 30px;
+}
+#whtsapp{
+    margin-right: 30px;
+}
+
+
+#navbar3{
+    background-color: #053B50;
+    padding: 15px;
+}
+#navbar3 li{
+    color: #EEEEEE;
+    margin-left: 50px;
+}
+
+#navbar2 li{
+    color: #EEEEEE;
+    margin-left: 50px;
+}
+
+.container h1{
+    background-color: #F5FCCD;
+    padding: 10px;
+}
+
+
+.card-img-top{
+    max-width: 80px;
+    margin-left: 100px;
+    margin-top: 25px;
+}
+
+#weather-box{
+    background-color: #D9D9D9;
+    margin-top: 130px;
+    margin-left: 15px;
+}
+
+.history-footer{
+    background-color: #053B50;
+}
+
