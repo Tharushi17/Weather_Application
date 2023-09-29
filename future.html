@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,13 +9,14 @@
     <link rel="stylesheet" href="style/style.css">
 
 </head>
+
 <body>
     <div>
         <nav class="navbar navbar-expand-sm navbar-dark" id="navbar3">
             <button class="navbar-toggler" data-toggle="collapse" data-target="#items">
                 <span class="navbar-toggler-icon"></span>
             </button>
-                
+
             <div class="container container-fluid">
                 <div class="collapse navbar-collapse" id="items">
                     <ul class="navbar-nav">
@@ -23,7 +25,7 @@
                         <li class="nav-item"><a href="history.html" class="nav-link">Yesterday</a></li>
                     </ul>
                 </div>
-            <!--nav bar-->
+                <!--nav bar-->
         </nav>
 
 
@@ -32,7 +34,7 @@
         </div>
 
 
-        <div class="mt-3" id="search">     <!--breaker-->
+        <div class="mt-3" id="search"> <!--breaker-->
             <input type="text" class="form-controller" placeholder="Enter City Name" id="searchField">
             <button class="btn btn-primary" onclick="searchPredictions()">Search</button><br><br>
             <h1 id="cityName" class="font-monospace">City</h1>
@@ -49,51 +51,51 @@
                     <div>
                         <img class="card-img-top" alt="" id="icon1">
                     </div>
-        
+
                     <div class="card-body text-center">
                         <div class="temp-container">
                             <h4 id="temp1"></h4>
                             <h4>℃</h4>
                         </div>
-                      <p id="condition1">condition</p>
-                      <table>
-                        <tr>
-                            <td><img src="assets\icons8-humidity-50.png" alt=""></td>
-                            <td>humidity =</td>
-                            <td id="humid1"> val</td>
-                            <td>%</td>
-                        </tr>
-                        <tr>
-                            <td><img src="assets\icons8-uv-index-64.png" alt=""></td>
-                            <td>UV index = </td>
-                            <td id="uv1">val</td>
-                        </tr>
-                        <tr>
-                            <td><img src="assets\icons8-wind-50.png" alt=""></td>
-                            <td>Wind speed = </td>
-                            <td id="wind1">val</td>
-                            <td>mph</td>
-                        </tr>
-                      </table>
+                        <p id="condition1">condition</p>
+                        <table>
+                            <tr>
+                                <td><img src="assets\icons8-humidity-50.png" alt=""></td>
+                                <td>humidity =</td>
+                                <td id="humid1"> val</td>
+                                <td>%</td>
+                            </tr>
+                            <tr>
+                                <td><img src="assets\icons8-uv-index-64.png" alt=""></td>
+                                <td>UV index = </td>
+                                <td id="uv1">val</td>
+                            </tr>
+                            <tr>
+                                <td><img src="assets\icons8-wind-50.png" alt=""></td>
+                                <td>Wind speed = </td>
+                                <td id="wind1">val</td>
+                                <td>mph</td>
+                            </tr>
+                        </table>
                     </div>
-                  </div>
                 </div>
+            </div>
 
 
-                <div class="col">
+            <div class="col">
 
-                    <!--day 2-->
-                    <div class="card mx-auto" style="width: 17rem;" id="weather-2">
-                        <h5 class="date and time text-center" id="day2">date</h5>
-                        <div>
-                            <img class="card-img-top" alt="" id="icon2">
+                <!--day 2-->
+                <div class="card mx-auto" style="width: 17rem;" id="weather-2">
+                    <h5 class="date and time text-center" id="day2">date</h5>
+                    <div>
+                        <img class="card-img-top" alt="" id="icon2">
+                    </div>
+
+                    <div class="card-body text-center">
+                        <div class="temp-container">
+                            <h4 id="temp2"></h4>
+                            <h4>℃</h4>
                         </div>
-
-                        <div class="card-body text-center">
-                            <div class="temp-container">
-                                <h4 id="temp2"></h4>
-                                <h4>℃</h4>
-                            </div>
                         <p id="condition2">condition</p>
                         <table>
                             <tr>
@@ -114,12 +116,12 @@
                                 <td>mph</td>
                             </tr>
                         </table>
-                        </div>
                     </div>
                 </div>
+            </div>
 
 
-                
+
 
         </div>
 
@@ -141,4 +143,5 @@
     <script src="js/app.js"></script>
 
 </body>
+
 </html>

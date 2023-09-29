@@ -1,4 +1,4 @@
-.logo{
+.logo {
     height: 60px;
     width: 60px;
     position: relative;
@@ -10,41 +10,46 @@
     padding: 0;
 }
 
-#home{
-    background-color: var(--primary-color);
-}
-:root{
-    --primary-color:#ffffff;
-    --secondary-color:rgb(52, 49, 49); 
-
-}
-.dark-theme{
-    --primary-color:rgb(52, 49, 49);
-    --secondary-color:#ffffff;
-}
-
-
-.breaker{
+#home {
     background-color: var(--primary-color);
 }
 
-#navbar{
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: rgb(52, 49, 49);
+
+}
+
+.dark-theme {
+    --primary-color: rgb(52, 49, 49);
+    --secondary-color: #ffffff;
+}
+
+
+.breaker {
+    background-color: var(--primary-color);
+}
+
+#navbar {
     background-color: #076480;
     color: var(--primary-color);
 }
-#navbar li{
+
+#navbar li {
     color: var(--primary-color);
     margin-left: 50px;
     text-align: center;
 }
-#title2{
+
+#title2 {
     color: var(--secondary-color);
 }
-#outerContainer{
+
+#outerContainer {
     position: relative;
 }
 
-#search{
+#search {
     position: absolute;
     margin: auto;
     left: 0;
@@ -53,11 +58,11 @@
 }
 
 
-#title{
+#title {
     position: absolute;
 }
 
-#details  {
+#details {
     margin-top: 185px;
     background-color: #57b4ad;
     width: 90%;
@@ -69,17 +74,17 @@
 
 
 
-#img{
+#img {
     max-width: max-content;
 }
 
-#icon{
+#icon {
     margin-top: 20px;
     width: 110px;
     height: 110px;
 }
 
-#historyBtn{
+#historyBtn {
     padding: 15px;
     margin-left: 50px;
     background-color: #82E5E0;
@@ -87,10 +92,10 @@
     border: 0;
 }
 
-#futureBtn{
+#futureBtn {
     padding: 15px;
     margin-left: 100px;
-    background-color:#ABE3F5;
+    background-color: #ABE3F5;
     border-radius: 15px;
     border: 0;
 }
@@ -100,52 +105,51 @@
     justify-content: center;
     align-items: center;
 }
+
 .temp-container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .wind-container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#cityName{
-    color: var(--secondary-color);
-}
-#details{
-    color: black;
-}
-#details h3{
-    color: black;
-}
-#condition{
+
+#cityName {
     color: var(--secondary-color);
 }
 
-#button-separator{
+#details {
+    color: black;
+}
+
+#details h3 {
+    color: black;
+}
+
+#condition {
+    color: var(--secondary-color);
+}
+
+#button-separator {
     background-color: var(--primary-color);
     height: 2px;
     margin: 10px 0;
 }
 
-#map{
+#map {
     margin-left: 25px;
 }
-#moonIcon{
+
+#moonIcon {
     width: 40px;
     cursor: pointer;
 }
 
-<!--Homepage-->
-
-
-
-
-
-
-
-#footer {
+< !--Homepage-->#footer {
 
     bottom: 0;
     left: 0;
@@ -156,7 +160,7 @@
     text-align: center;
 }
 
-#home{
+#home {
     margin: 0%;
 }
 
@@ -165,65 +169,66 @@
 }
 
 
-#navbar2{
+#navbar2 {
     background-color: #076480;
     color: aliceblue;
     padding: 15px;
 }
 
-#img-rain{
+#img-rain {
     max-width: 30%;
     margin: 0;
 }
-<!--sign-up-->
 
-
-
-
-
-.card-title{
+< !--sign-up-->.card-title {
     margin-top: 20px;
 }
-.card-title2{
+
+.card-title2 {
     margin-left: 40px;
 }
-.card{
+
+.card {
     border: 0;
 }
 
-#searchField{
+#searchField {
     padding: 4px;
     margin-top: 1px;
 }
-.btn{
+
+.btn {
     margin-left: 5px;
 }
 
 
-.input{
+.input {
     margin-left: 11%;
-    background-color:#EEEEEE;
+    background-color: #EEEEEE;
     border: 0;
     padding: 5px;
 }
-.input1{
+
+.input1 {
     margin-left: 5%;
-    background-color:#EEEEEE;
+    background-color: #EEEEEE;
     border: 0;
     padding: 5px;
 }
-#sign-in-details{
+
+#sign-in-details {
     margin-top: 5%;
 }
 
-#signUp{
+#signUp {
     padding: 10px;
     border-radius: 15px;
     border: 0;
     background-color: #ABE3F5;
     margin-left: 28%;
 }
-#logIn{
+
+#logIn {
     padding: 10px;
     border-radius: 15px;
     border: 0;
@@ -231,140 +236,128 @@
     margin-left: 30px;
 }
 
-footer{
-    background-color: #076480;;
+footer {
+    background-color: #076480;
+    ;
 }
 
-.footerContainer{
+.footerContainer {
     width: 100%;
     padding: 30px;
 }
 
-.socialIcons{
+.socialIcons {
     display: flex;
     justify-content: center;
     margin: 10px;
     border-radius: 50%;
 }
 
-.footerNav{
+.footerNav {
     margin: 30px 0;
 
 }
 
-.footerNav p{
+.footerNav p {
     display: flex;
     justify-content: center;
     color: #EEEEEE;
 }
 
-#facebook{
-    margin-right: 30px;
-}
-#insta{
-    margin-right: 30px;
-}
-#twitter{
-    margin-right: 30px;
-}
-#whtsapp{
+#facebook {
     margin-right: 30px;
 }
 
-#navbar2 li{
+#insta {
+    margin-right: 30px;
+}
+
+#twitter {
+    margin-right: 30px;
+}
+
+#whtsapp {
+    margin-right: 30px;
+}
+
+#navbar2 li {
     color: #EEEEEE;
     margin-left: 50px;
 }
-#map{
+
+#map {
     height: 190px;
 }
 
 
-<!--history-->
-
-#navbar3 li{
+< !--history-->#navbar3 li {
     color: #EEEEEE;
     margin-left: 50px;
 }
 
-#navbar3{
+#navbar3 {
     background-color: #053B50;
     padding: 15px;
 }
-#navbar3 li{
+
+#navbar3 li {
     color: #EEEEEE;
     margin-left: 50px;
 }
 
-.container h1{
+.container h1 {
     background-color: #F5FCCD;
     padding: 10px;
 }
 
 
-.card-img-top{
+.card-img-top {
     max-width: 80px;
     margin-left: 100px;
     margin-top: 25px;
 }
 
-.history-footer{
+.history-footer {
     background-color: #053B50;
 }
 
-#weather-box1{
+#weather-box1 {
     background-color: #D9D9D9;
     margin-top: 130px;
     margin-left: 5px;
 }
 
-#weather-box2{
-    background-color: #D9D9D9;
-    margin-top: 130px;
-    margin-left: 5px;
-}
-#weather-box3{
+#weather-box2 {
     background-color: #D9D9D9;
     margin-top: 130px;
     margin-left: 5px;
 }
 
-#weather-box4{
+#weather-box3 {
     background-color: #D9D9D9;
     margin-top: 130px;
     margin-left: 5px;
 }
 
-#weather-box5{
-    background-color: #D9D9D9;
-    margin-top: 130px;
-    margin-left: 5px;
-}
-#weather-box6{
-    background-color: #D9D9D9;
-    margin-top: 130px;
-    margin-left: 5px;
-}
-#weather-box7{
+#weather-box4 {
     background-color: #D9D9D9;
     margin-top: 130px;
     margin-left: 5px;
 }
 
-
-
-#weather-1{
+#weather-box5 {
     background-color: #D9D9D9;
     margin-top: 130px;
     margin-left: 5px;
 }
 
-#weather-2{
+#weather-box6 {
     background-color: #D9D9D9;
     margin-top: 130px;
     margin-left: 5px;
 }
-#weather-3{
+
+#weather-box7 {
     background-color: #D9D9D9;
     margin-top: 130px;
     margin-left: 5px;
@@ -372,9 +365,20 @@ footer{
 
 
 
+#weather-1 {
+    background-color: #D9D9D9;
+    margin-top: 130px;
+    margin-left: 5px;
+}
 
+#weather-2 {
+    background-color: #D9D9D9;
+    margin-top: 130px;
+    margin-left: 5px;
+}
 
-
-
-
-
+#weather-3 {
+    background-color: #D9D9D9;
+    margin-top: 130px;
+    margin-left: 5px;
+}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,20 +8,20 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-     crossorigin=""/>
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 
 </head>
+
 <body>
-    
+
     <div id="home">
         <nav class="navbar navbar-expand-sm navbar-dark" id="navbar">
             <img src="assets/logo.png" alt="" class="logo">
             <button class="navbar-toggler" data-toggle="collapse" data-target="#items">
                 <span class="navbar-toggler-icon"></span>
             </button>
-                
-    
+
+
             <div class="container container-fluid">
                 <div class="collapse navbar-collapse" id="items">
                     <ul class="navbar-nav">
@@ -31,27 +32,27 @@
                     </ul>
                 </div>
                 <img src="assets\day & night.png" id="moonIcon">
-            <!--nav bar-->
-        </nav>   
-    
-    
+                <!--nav bar-->
+        </nav>
+
+
         <div class="card text-bg-dark">
             <img src="assets\1.jpg" class="card-img" alt="...">
             <div class="card-img-overlay">
-              <h1 class="card-title" id="title2"><strong>Daily Weather</strong></h1>
+                <h1 class="card-title" id="title2"><strong>Daily Weather</strong></h1>
             </div>
-          </div><!--main image-->
+        </div><!--main image-->
 
-    
-        <div class="mt-3" id="search">     <!--breaker-->
+
+        <div class="mt-3" id="search"> <!--breaker-->
             <input type="text" class="form-controller" placeholder="Enter City Name" id="searchField">
             <button class="btn btn-primary" onclick="searchOnAction()">Search</button><br><br>
             <h1 id="cityName" class="font-monospace">City</h1><br>
             <h6 id="condition">condition</h6>
         </div><br><br>
 
-        
-        
+
+
         <div class="container" id="details">
             <h3 class="font-monospace"><strong>Today's Weather</strong></h3>
             <div class="text-center">
@@ -69,11 +70,11 @@
                     <div class="col-12 col-md-4 col-sm-6 col-lg-4 text-center">
                         <div>
                             <h5>Temperature Outside</h4><br>
-                            <img src="assets\icons8-temperature-outside-50.png" alt=""><br>
-                            <div class="temp-container">
-                                <h4 id="temperature"></h4>
-                                <h4>℃</h4>
-                            </div>
+                                <img src="assets\icons8-temperature-outside-50.png" alt=""><br>
+                                <div class="temp-container">
+                                    <h4 id="temperature"></h4>
+                                    <h4>℃</h4>
+                                </div>
                         </div>
                     </div>
                     <div class="col-12 col-sm-6 col-lg-4">
@@ -112,55 +113,55 @@
                 </div>
             </div>
         </div><!--weather detail display-->
-    
+
         <div class="container">
             <div class="row mt-3" id="map">
-                
+
             </div>
         </div><!--map View-->
-    
-    
+
+
         <div class="container" id="moreWeather">
             <div class="row mt-5">
-                    <div class="text-center"></div>
-                    <button id="historyBtn" onclick="historyBtnOnAction()">Past Weather</button>
-                    <button id="futureBtn" onclick="futureBtnOnAction()">Upcoming Weather</button>
-                </div>
-                </div>
+                <div class="text-center"></div>
+                <button id="historyBtn" onclick="historyBtnOnAction()">Past Weather</button>
+                <button id="futureBtn" onclick="futureBtnOnAction()">Upcoming Weather</button>
             </div>
-        </div><!--buttons-->
-        
-        <div class="breaker">
-            <br>
         </div>
+    </div>
+    </div><!--buttons-->
 
-        <footer id="contactUs">
-            <div class="footerContainer">
-                <div class="socialIcons">
-                    <img src="assets\icons8-facebook-50.png" alt="" id="facebook">
-                    <img src="assets\icons8-instagram-50.png" alt="" id="insta">
-                    <img src="assets\icons8-twitter-50.png" alt="" id="twitter">
-                    <img src="assets\icons8-whatsapp-50.png" alt="" id="whtsapp">
-                </div>
-                <div class="footerNav">
-                    <p>dailyweather@gmail.com</p>
-                    <p>No. 55,Nuwara Eliya Road, Kandy</p><br>
-                    <p>©All rights recieved</p>
-                </div>
-            </div><!--footer-->
-        </footer>
-        
+    <div class="breaker">
+        <br>
+    </div>
+
+    <footer id="contactUs">
+        <div class="footerContainer">
+            <div class="socialIcons">
+                <img src="assets\icons8-facebook-50.png" alt="" id="facebook">
+                <img src="assets\icons8-instagram-50.png" alt="" id="insta">
+                <img src="assets\icons8-twitter-50.png" alt="" id="twitter">
+                <img src="assets\icons8-whatsapp-50.png" alt="" id="whtsapp">
+            </div>
+            <div class="footerNav">
+                <p>dailyweather@gmail.com</p>
+                <p>No. 55,Nuwara Eliya Road, Kandy</p><br>
+                <p>©All rights recieved</p>
+            </div>
+        </div><!--footer-->
+    </footer>
+
     </div>
 
 
     <!-- Make sure you put this AFTER Leaflet's CSS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-     crossorigin=""></script>
- 
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="js/app.js"></script>
 
 </body>
+
 </html>
