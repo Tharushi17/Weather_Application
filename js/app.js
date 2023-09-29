@@ -58,7 +58,7 @@ function searchOnAction(){
         $.ajax({
     
             method : "GET",
-            url : `http://api.weatherapi.com/v1/forecast.json?key=${key}&q=${n}`,
+            url : `https://api.weatherapi.com/v1/forecast.json?key=${key}&q=${n}`,
                 
             success : (resp) =>{
                 console.log(resp);
@@ -70,7 +70,7 @@ function searchOnAction(){
     if(search != null){
         $.ajax({
             method : "GET",
-            url : `http://api.weatherapi.com/v1/current.json?key=841e4f34d3e84f18aa7144506232109&q=${n}`,
+            url : `https://api.weatherapi.com/v1/current.json?key=841e4f34d3e84f18aa7144506232109&q=${n}`,
             
             success : (resp) => {
                 console.log(resp);
@@ -187,7 +187,7 @@ function searchHistory(){
 
     $.ajax({
         method : "GET",
-        url : `http://api.weatherapi.com/v1/current.json?key=841e4f34d3e84f18aa7144506232109&q=${n}`,
+        url : `https://api.weatherapi.com/v1/current.json?key=841e4f34d3e84f18aa7144506232109&q=${n}`,
         
         success : (resp) =>{
             console.log(resp);
@@ -212,7 +212,7 @@ function searchHistory(){
                 $.ajax({
 
                     method : "GET",
-                    url : `http://api.weatherapi.com/v1/history.json?key=${key}&q=${n}&dt=${formattedSevenDays}&end_dt=${formattedDate}`,
+                    url : `https://api.weatherapi.com/v1/history.json?key=${key}&q=${n}&dt=${formattedSevenDays}&end_dt=${formattedDate}`,
                         
                     success : (resp) =>{
                         console.log(resp);
@@ -348,7 +348,7 @@ function searchHistory(){
 
         $.ajax({
             method : "GET",
-            url : `http://api.weatherapi.com/v1/current.json?key=841e4f34d3e84f18aa7144506232109&q=${n}`,
+            url : `https://api.weatherapi.com/v1/current.json?key=841e4f34d3e84f18aa7144506232109&q=${n}`,
             
             success : (resp) =>{
                 console.log(resp);
@@ -373,7 +373,7 @@ function searchHistory(){
                     $.ajax({
     
                         method : "GET",
-                        url : `http://api.weatherapi.com/v1/forecast.json?key=${key}&q=${n}&days=4`,
+                        url : `https://api.weatherapi.com/v1/forecast.json?key=${key}&q=${n}&days=4`,
                             
                         success : (resp) =>{
                             console.log(resp);
