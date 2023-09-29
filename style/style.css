@@ -24,6 +24,9 @@
 }
 
 
+.breaker{
+    background-color: var(--primary-color);
+}
 
 #navbar{
     background-color: #076480;
@@ -55,7 +58,7 @@
 }
 
 #details  {
-    margin-top: 150px;
+    margin-top: 185px;
     background-color: #57b4ad;
     width: 90%;
     max-width: 1080px;
@@ -63,6 +66,7 @@
     border-radius: 15px;
     padding: 20px;
 }
+
 
 
 #img{

@@ -47,6 +47,7 @@ function searchOnAction(){
         const uv = $("#uv");
         const wind = $("#wind");
         const condition = $('#condition');
+        const alert = $("#alert");
 
         const icon = $("#icon");
 
@@ -66,7 +67,7 @@ function searchOnAction(){
         });
 
 
-    if(search != ""){
+    if(search != null){
         $.ajax({
             method : "GET",
             url : `http://api.weatherapi.com/v1/current.json?key=841e4f34d3e84f18aa7144506232109&q=${n}`,
@@ -378,6 +379,7 @@ function searchHistory(){
                             console.log(resp);
     
                             if(resp.forecast && resp.forecast.forecastday && resp.forecast.forecastday.length > 0){
+
                                 icon1.attr("src", resp.forecast.forecastday[1].day.condition.icon);
                                 day1.text(resp.forecast.forecastday[1].date);
     
@@ -410,6 +412,8 @@ function searchHistory(){
                                 wind3.text(resp.forecast.forecastday[3].day.avgvis_miles);
                                 condition3.text(resp.forecast.forecastday[3].day.condition.text);
                                 
+
+
                         }   
                     }
                 });
