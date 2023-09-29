@@ -329,15 +329,6 @@ function searchHistory(){
         const temp2 = $("#temp2");
         const day2 = $("#day2");
         const condition2 = $("#condition2");
-    
-    
-        const humid3 = $("#humid3");
-        const uv3 = $("#uv3");
-        const wind3 = $("#wind3");
-        const icon3 = $("#icon3");
-        const temp3 = $("#temp3");
-        const day3 = $("#day3");
-        const condition3 = $("#condition3");
 
 
         //--- api info -------
@@ -401,19 +392,6 @@ function searchHistory(){
                                 condition2.text(resp.forecast.forecastday[2].day.condition.text);
                             
     
-    
-                            //---- day 3 -----------
-                                icon3.attr("src", resp.forecast.forecastday[3].day.condition.icon);
-                                day3.text(resp.forecast.forecastday[3].date);
-    
-                                temp3.text(resp.forecast.forecastday[3].day.avgtemp_c)
-                                humid3.text(resp.forecast.forecastday[3].day.avghumidity);
-                                uv3.text(resp.forecast.forecastday[3].day.uv);
-                                wind3.text(resp.forecast.forecastday[3].day.avgvis_miles);
-                                condition3.text(resp.forecast.forecastday[3].day.condition.text);
-                                
-
-
                         }   
                     }
                 });
